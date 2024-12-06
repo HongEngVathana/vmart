@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vmart/screens/home_screen.dart';
 
 void main(List<String> args) {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {

@@ -1,0 +1,268 @@
+[
+  {
+    "product": {
+      "name": "1750 Water 2 L - Pack Of 6",
+      "image": "https://i.pinimg.com/736x/ad/fd/91/adfd91f55807fabd116ccb0c39793a86.jpg",
+      "volume": "6x2 L",
+      "price": {
+        "currency": "LBP",
+        "value": 18000,
+        "converted": {
+          "currency": "USD",
+          "value": 12.3
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Aqua Pure 1.5 L - Pack Of 12",
+      "image": "https://i.pinimg.com/736x/36/86/d4/3686d4cb2008d1e252c5b0351f52753a.jpg",
+      "volume": "12x1.5 L",
+      "price": {
+        "currency": "LBP",
+        "value": 19000,
+        "converted": {
+          "currency": "USD",
+          "value": 44.6
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Mountain Spring 5 L - Pack Of 2",
+      "image": "https://i.pinimg.com/736x/bd/f5/85/bdf58579ce3cd03d03b103fdbeaa8444.jpg",
+      "volume": "2x5 L",
+      "price": {
+        "currency": "LBP",
+        "value": 20000,
+        "converted": {
+          "currency": "USD",
+          "value": 66.3
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Nature's Drop 1 L - Pack Of 6",
+      "image": "https://i.pinimg.com/736x/b8/15/f7/b815f70ba2463f6e491388699d2fa26a.jpg",
+      "volume": "6x1 L",
+      "price": {
+        "currency": "LBP",
+        "value": 30000,
+        "converted": {
+          "currency": "USD",
+          "value": 55.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Crystal Clear 1.5 L - Pack Of 6",
+      "image": "https://i.pinimg.com/736x/e1/6c/2a/e16c2a35d8550a6de77898f7d2f1b433.jpg",
+      "volume": "6x1.5 L",
+      "price": {
+        "currency": "LBP",
+        "value": 40000,
+        "converted": {
+          "currency": "USD",
+          "value": 33.4
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Pure Life 0.5 L - Pack Of 24",
+      "image": "https://i.pinimg.com/736x/96/b3/af/96b3af74ee4ed9c5ddc060719b1f6bb2.jpg",
+      "volume": "24x0.5 L",
+      "price": {
+        "currency": "LBP",
+        "value": 50000,
+        "converted": {
+          "currency": "USD",
+          "value": 20.3
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Eco Spring 1 L - Pack Of 12",
+      "image": "https://i.pinimg.com/736x/ac/99/eb/ac99ebaa1dbf35e614e7f8bca9e11607.jpg",
+      "volume": "12x1 L",
+      "price": {
+        "currency": "LBP",
+        "value": 60000,
+        "converted": {
+          "currency": "USD",
+          "value": 8.9
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Fresh Flow 2 L - Pack Of 4",
+      "image": "https://i.pinimg.com/736x/5d/97/d4/5d97d4653b19694659d85a72720c4a57.jpg",
+      "volume": "4x2 L",
+      "price": {
+        "currency": "LBP",
+        "value": 70000,
+        "converted": {
+          "currency": "USD",
+          "value": 80.29
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Sparkling Aqua 1.5 L - Pack Of 6",
+      "image": "https://i.pinimg.com/736x/61/e8/64/61e864e0d01a7dab56cd7dc09605dd0b.jpg",
+      "volume": "6x1.5 L",
+      "price": {
+        "currency": "LBP",
+        "value": 80000,
+        "converted": {
+          "currency": "USD",
+          "value": 29.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Glacier Water 1 L - Pack Of 10",
+      "image": "https://i.pinimg.com/736x/61/e8/64/61e864e0d01a7dab56cd7dc09605dd0b.jpg",
+      "volume": "10x1 L",
+      "price": {
+        "currency": "LBP",
+        "value": 9000,
+        "converted": {
+          "currency": "USD",
+          "value": 20.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "River Spring 0.75 L - Pack Of 8",
+      "image": "https://i.pinimg.com/736x/ce/fb/67/cefb67f39b75895479c47c526b637abc.jpg",
+      "volume": "8x0.75 L",
+      "price": {
+        "currency": "LBP",
+        "value": 9500,
+        "converted": {
+          "currency": "USD",
+          "value": 23.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "AquaFresh 0.33 L - Pack Of 24",
+      "image": "https://i.pinimg.com/736x/9a/c7/7a/9ac77ae8106eee4562b47a1aa8e2b93d.jpg",
+      "volume": "24x0.33 L",
+      "price": {
+        "currency": "LBP",
+        "value": 7500,
+        "converted": {
+          "currency": "USD",
+          "value": 44.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Blue Lake 5 L - Pack Of 1",
+      "image": "https://i.pinimg.com/736x/15/19/ba/1519ba4d68c98bd31c1a6a8ba4a24044.jpg",
+      "volume": "1x5 L",
+      "price": {
+        "currency": "LBP",
+        "value": 4500,
+        "converted": {
+          "currency": "USD",
+          "value": 30.8
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Silver Spring 1.5 L - Pack Of 4",
+      "image": "https://i.pinimg.com/736x/75/4b/8d/754b8dba551a912adf455b8ab16ac8c8.jpg",
+      "volume": "4x1.5 L",
+      "price": {
+        "currency": "LBP",
+        "value": 6000,
+        "converted": {
+          "currency": "USD",
+          "value": 11.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  }
+]

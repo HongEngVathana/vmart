@@ -1,13 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
-
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:vmart/models/categorie_model.dart';
+import 'package:vmart/models/survival_model.dart';
 import 'package:vmart/screens/categorie_screen.dart';
 import 'package:vmart/screens/profile_screen.dart';
 import 'package:vmart/screens/search_screen.dart';
-import 'package:vmart/services/catgorie_service.dart';
+import 'package:vmart/services/suvival_service.dart';
+import 'package:vmart/widgets/Features_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -77,13 +78,37 @@ class _HomeScreenState extends State<HomeScreen> {
           });
         },
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: SpeedDial(
+        activeBackgroundColor: const Color.fromARGB(255, 130, 247, 241),
+        icon: Icons.message,
+        foregroundColor: Colors.white,
         backgroundColor: const Color.fromARGB(255, 15, 206, 171),
-        onPressed: () {},
-        child: const Icon(
-          Icons.message,
-          color: Colors.white,
-        ),
+        children: [
+          SpeedDialChild(
+            backgroundColor: const Color.fromARGB(255, 15, 206, 171),
+            child: const Icon(
+              Icons.notification_add,
+              color: Colors.white,
+            ),
+            onTap: () {},
+          ),
+          SpeedDialChild(
+            backgroundColor: const Color.fromARGB(255, 15, 206, 171),
+            child: const Icon(
+              Icons.email,
+              color: Colors.white,
+            ),
+            onTap: () {},
+          ),
+          SpeedDialChild(
+            backgroundColor: const Color.fromARGB(255, 15, 206, 171),
+            child: const Icon(
+              Icons.call,
+              color: Colors.white,
+            ),
+            onTap: () {},
+          ),
+        ],
       ),
       body: _screens[_currentIndex],
     );
@@ -110,6 +135,7 @@ class _HomeContentScreenState extends State<HomeContentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: ListView(
         children: [
           Column(
@@ -164,7 +190,31 @@ class _HomeContentScreenState extends State<HomeContentScreen> {
                   ],
                 ),
               ),
-              Featured()
+              const Featured(),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Survival Essentials ",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      child: TextButton(
+                          onPressed: () {
+                            print("View All");
+                          },
+                          child: const Text("View All",
+                              style: TextStyle(color: Colors.blue))),
+                    )
+                  ],
+                ),
+              ),
+              const Survival()
             ],
           ),
         ],
@@ -186,68 +236,141 @@ class _HomeContentScreenState extends State<HomeContentScreen> {
   }
 }
 
-class Featured extends StatefulWidget {
-  const Featured({Key? key}) : super(key: key);
+class Survival extends StatefulWidget {
+  const Survival({super.key});
 
   @override
-  State<Featured> createState() => _FeaturedState();
+  State<Survival> createState() => _SurvivalState();
 }
 
-class _FeaturedState extends State<Featured> {
-  late Future<List<Category>> _categories;
+class _SurvivalState extends State<Survival> {
+  late Future<List<SurvivalModel>> _survivalstate;
 
   @override
   void initState() {
     super.initState();
-    _categories = loadCategories(); // Load the categories
+    _survivalstate = loadSurvivalItems();
   }
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<List<Category>>(
-      future: _categories,
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
+    return FutureBuilder<List<SurvivalModel>>(
+      future: _survivalstate,
+      builder: (context, snapshots) {
+        if (snapshots.connectionState == ConnectionState.waiting) {
           return const Center(child: CircularProgressIndicator());
-        } else if (snapshot.hasError) {
-          return Center(child: Text('Error: ${snapshot.error}'));
-        } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-          return const Center(child: Text('No categories found.'));
+        } else if (snapshots.hasError) {
+          return Center(child: Text('Error: ${snapshots.error}'));
+        } else if (!snapshots.hasData || snapshots.data!.isEmpty) {
+          return const Center(child: Text('No Survival Essentials'));
         } else {
-          final categories = snapshot.data!;
+          final survivalItems = snapshots.data!;
           return SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: categories.map((category) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Image.network(
-                          category.image,
-                          width: 50,
-                          height: 50,
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      Text(
-                        category.title,
-                        style: const TextStyle(fontSize: 14),
-                      ),
-                    ],
-                  ),
-                );
+              children: survivalItems.map((survivalItem) {
+                return _buildSurvivalCard(survivalItem);
               }).toList(),
             ),
           );
         }
       },
+    );
+  }
+
+  Widget _buildSurvivalCard(SurvivalModel survivalItem) {
+    bool isAddedToCart = survivalItem.addToCart; // Track cart state
+
+    return Card(
+      shape: const RoundedRectangleBorder(),
+      child: Container(
+        width: 150,
+        height: 350,
+        color: Colors.white,
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      survivalItem.favoritte = !survivalItem.favoritte;
+                    });
+                    print(survivalItem.favoritte
+                        ? "Added to favorites"
+                        : "Removed from favorites");
+                  },
+                  icon: const Icon(Icons.favorite),
+                  color: survivalItem.favoritte
+                      ? Colors.grey[200]
+                      : Colors.red[600],
+                ),
+              ],
+            ),
+            Expanded(
+              child: Image.network(
+                survivalItem.image,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Text(survivalItem.volume),
+            ),
+            Container(
+              color: Colors.grey[400],
+              width: 150,
+              child: TextButton(
+                onPressed: () {
+                  setState(() {
+                    isAddedToCart = !isAddedToCart;
+                    survivalItem.addToCart = isAddedToCart;
+                  });
+                  print(isAddedToCart ? "Added to cart" : "Removed from cart");
+                },
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(
+                    isAddedToCart
+                        ? Colors.grey[400]
+                        : const Color.fromARGB(255, 15, 206, 171),
+                  ),
+                  shape: WidgetStateProperty.all(
+                    const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.zero),
+                  ),
+                ),
+                child: const Text(
+                  "ADD TO CART",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: Text(survivalItem.name),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Row(
+                    children: [
+                      Text(
+                        "${survivalItem.value}  Real",
+                        style: const TextStyle(
+                          color: Color.fromARGB(255, 15, 206, 171),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }
