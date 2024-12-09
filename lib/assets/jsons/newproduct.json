@@ -1,0 +1,192 @@
+[
+  {
+    "product": {
+      "name": "Golden Harvest Rice 5kg",
+      "image": "https://i.pinimg.com/736x/47/b9/c3/47b9c350fe51248ab2d3d8b04476b42d.jpg",
+      "volume": "5kg",
+      "price": {
+        "currency": "REAL",
+        "value": 12000,
+        "converted": {
+          "currency": "USD",
+          "value": 10.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Premium Olive Oil 1L",
+      "image": "https://i.pinimg.com/736x/bc/01/12/bc0112101570a12eb16589321574738f.jpg",
+      "volume": "1L",
+      "price": {
+        "currency": "REAL",
+        "value": 20000,
+        "converted": {
+          "currency": "USD",
+          "value": 16.7
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Organic Almonds 500g",
+      "image": "https://i.pinimg.com/736x/12/a7/4d/12a74dc7065afea01a8c6725a817cdaa.jpg",
+      "volume": "500g",
+      "price": {
+        "currency": "REAL",
+        "value": 18000,
+        "converted": {
+          "currency": "USD",
+          "value": 15.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Whole Wheat Bread 400g",
+      "image": "https://i.pinimg.com/736x/fc/57/b9/fc57b91e2c2da26f79fabb7d246b0812.jpg",
+      "volume": "400g",
+      "price": {
+        "currency": "REAL",
+        "value": 5000,
+        "converted": {
+          "currency": "USD",
+          "value": 4.2
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Fresh Milk 2L",
+      "image": "https://i.pinimg.com/736x/64/6c/e3/646ce3f114f8cf8c6ccdaa2dde652af4.jpg",
+      "volume": "2L",
+      "price": {
+        "currency": "REAL",
+        "value": 7000,
+        "converted": {
+          "currency": "USD",
+          "value": 5.8
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Dark Chocolate 200g",
+      "image": "https://i.pinimg.com/474x/90/80/41/90804174bb61661104a8047040d37f59.jpg",
+      "volume": "200g",
+      "price": {
+        "currency": "REAL",
+        "value": 12000,
+        "converted": {
+          "currency": "USD",
+          "value": 10.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Cheddar Cheese Block 500g",
+      "image": "https://i.pinimg.com/736x/f0/29/67/f02967ad394c081aaa6ec1b79dacc7c8.jpg",
+      "volume": "500g",
+      "price": {
+        "currency": "REAL",
+        "value": 15000,
+        "converted": {
+          "currency": "USD",
+          "value": 12.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Peanut Butter Jar 1kg",
+      "image": "https://i.pinimg.com/736x/b8/20/8b/b8208b79dc906f3d0596ccb3a1f91e09.jpg",
+      "volume": "1kg",
+      "price": {
+        "currency": "REAL",
+        "value": 10000,
+        "converted": {
+          "currency": "USD",
+          "value": 8.3
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Frozen Mixed Vegetables 1kg",
+      "image": "https://i.pinimg.com/736x/80/00/78/8000788bf6965359ae327ec606530320.jpg",
+      "volume": "1kg",
+      "price": {
+        "currency": "REAL",
+        "value": 8000,
+        "converted": {
+          "currency": "USD",
+          "value": 6.7
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Sparkling Water 750ml",
+      "image": "https://i.pinimg.com/736x/97/30/1d/97301d8ecae0e1721ad76622e96fdd1e.jpg",
+      "volume": "750ml",
+      "price": {
+        "currency": "REAL",
+        "value": 3000,
+        "converted": {
+          "currency": "USD",
+          "value": 2.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  }
+]

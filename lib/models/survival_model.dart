@@ -2,8 +2,10 @@ class SurvivalModel {
   String name;
   String image;
   String volume;
-  String currency;
-  double value;
+  String localCurrency;
+  double localValue;
+  String convertedCurrency;
+  double convertedValue;
   bool addToCart;
   bool favoritte;
 
@@ -11,8 +13,10 @@ class SurvivalModel {
     this.name = "",
     this.image = "",
     this.volume = "",
-    this.currency = "",
-    this.value = 0.0,
+    this.localCurrency = "",
+    this.localValue = 0.00,
+    this.convertedCurrency = "",
+    this.convertedValue = 0.0,
     this.addToCart = false,
     this.favoritte = false,
   });
@@ -25,8 +29,10 @@ class SurvivalModel {
       name: product['name'],
       image: product['image'],
       volume: product['volume'],
-      currency: price['currency'],
-      value: price['value'].toDouble(),
+      localCurrency: price['currency'],
+      localValue: price['value'].toDouble(),
+      convertedCurrency: price['converted']['currency'],
+      convertedValue: price['converted']['value'].toDouble(),
       addToCart: actions['add_to_cart'],
       favoritte: actions['favorite'],
     );

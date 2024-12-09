@@ -1,0 +1,162 @@
+[
+  {
+    "product": {
+      "name": "Gourmet Dog Biscuits - Bacon Flavor",
+      "image": "https://i.pinimg.com/736x/fc/80/c5/fc80c5153c59e3f37b08ec777180b462.jpg",
+      "volume": "2kg",
+      "price": {
+        "currency": "USD",
+        "value": 12.0,
+        "khmer_value": "49,200 KHR"
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Cat Salmon Pâté",
+      "image": "https://i.pinimg.com/736x/8a/b0/b6/8ab0b610f3b63332fe619117754f86f3.jpg",
+      "volume": "1kg",
+      "price": {
+        "currency": "USD",
+        "value": 14.0,
+        "khmer_value": "57,400 KHR"
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Exotic Parrot Pellets",
+      "image": "https://i.pinimg.com/736x/6f/51/b5/6f51b51a754a0f41dcfa129c3c7ca85a.jpg",
+      "volume": "3kg",
+      "price": {
+        "currency": "USD",
+        "value": 16.0,
+        "khmer_value": "65,600 KHR"
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Crunchy Guinea Pig Treats",
+      "image": "https://i.pinimg.com/736x/6b/76/45/6b7645a1979f9363c43cb93e559ade37.jpg",
+      "volume": "2kg",
+      "price": {
+        "currency": "USD",
+        "value": 10.0,
+        "khmer_value": "41,000 KHR"
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Tropical Fish Flakes",
+      "image": "https://i.pinimg.com/736x/97/05/08/970508cbe087d4587ae0a34cedc48209.jpg",
+      "volume": "500g",
+      "price": {
+        "currency": "USD",
+        "value": 8.0,
+        "khmer_value": "32,800 KHR"
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Premium Horse Feed",
+      "image": "https://i.pinimg.com/736x/be/b0/8f/beb08fc463b6a68e5277beb51322e549.jpg",
+      "volume": "25kg",
+      "price": {
+        "currency": "USD",
+        "value": 50.0,
+        "khmer_value": "205,000 KHR"
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Rabbit Alfalfa Cubes",
+      "image": "https://i.pinimg.com/736x/9a/2a/36/9a2a3667751f016889045b62bfcfaf5a.jpg",
+      "volume": "10kg",
+      "price": {
+        "currency": "USD",
+        "value": 20.0,
+        "khmer_value": "82,000 KHR"
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Bird Suet Cakes",
+      "image": "https://i.pinimg.com/736x/4f/a1/6b/4fa16b4ef09f3760e49c531e80cd4e1a.jpg",
+      "volume": "5pcs",
+      "price": {
+        "currency": "USD",
+        "value": 12.0,
+        "khmer_value": "49,200 KHR"
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Hamster Sunflower Mix",
+      "image": "https://i.pinimg.com/736x/f5/ef/10/f5ef106233f0be71555d44ba0d04376d.jpg",
+      "volume": "3kg",
+      "price": {
+        "currency": "USD",
+        "value": 9.0,
+        "khmer_value": "36,900 KHR"
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Lizard Insect Pellets",
+      "image": "https://i.pinimg.com/736x/d1/77/a8/d177a84836a2c3d7a9d9d807c1efc073.jpg",
+      "volume": "1kg",
+      "price": {
+        "currency": "USD",
+        "value": 11.0,
+        "khmer_value": "45,100 KHR"
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  }
+]

@@ -1,0 +1,346 @@
+{
+  "data": [
+    {
+      "product": {
+        "name": "Samsung 55-inch QLED 4K Smart TV",
+        "image": "https://i.pinimg.com/736x/d4/30/f0/d430f030c73137b9df746289c1337c77.jpg",
+        "capacity": "55-inch",
+        "price": {
+          "currency": "REAL",
+          "value": 450000,
+          "converted": {
+            "currency": "USD",
+            "value": 400.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "LG 65-inch OLED 4K TV",
+        "image": "https://i.pinimg.com/736x/22/bc/db/22bcdb132d19e15e9301ffc690689eaf.jpg",
+        "capacity": "65-inch",
+        "price": {
+          "currency": "REAL",
+          "value": 750000,
+          "converted": {
+            "currency": "USD",
+            "value": 680.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Sony Bravia 50-inch LED TV",
+        "image": "https://i.pinimg.com/736x/7c/49/4a/7c494ab69c97bd507be47a33fcbb052a.jpg",
+        "capacity": "50-inch",
+        "price": {
+          "currency": "REAL",
+          "value": 350000,
+          "converted": {
+            "currency": "USD",
+            "value": 310.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Samsung 9kg Front Load Washing Machine",
+        "image": "https://i.pinimg.com/736x/4b/9c/16/4b9c16612c8f536b1afba2f54cd9696b.jpg",
+        "capacity": "9kg",
+        "price": {
+          "currency": "REAL",
+          "value": 350000,
+          "converted": {
+            "currency": "USD",
+            "value": 310.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Bosch 8kg Front Load Washing Machine",
+        "image": "https://i.pinimg.com/736x/5b/84/e2/5b84e22a12b3bc9741eeccfe7e9d4218.jpg",
+        "capacity": "8kg",
+        "price": {
+          "currency": "REAL",
+          "value": 300000,
+          "converted": {
+            "currency": "USD",
+            "value": 270.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Whirlpool 10kg Top Load Washing Machine",
+        "image": "https://i.pinimg.com/736x/3f/77/ea/3f77ea276485103454d280ba4afe8827.jpg",
+        "capacity": "10kg",
+        "price": {
+          "currency": "REAL",
+          "value": 400000,
+          "converted": {
+            "currency": "USD",
+            "value": 360.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Philips 50-inch LED TV",
+        "image": "https://i.pinimg.com/736x/c8/2b/9c/c82b9c05e3a45fc9d13a140dc88fec54.jpg",
+        "capacity": "50-inch",
+        "price": {
+          "currency": "REAL",
+          "value": 330000,
+          "converted": {
+            "currency": "USD",
+            "value": 295.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "TCL 55-inch 4K Smart TV",
+        "image": "https://i.pinimg.com/736x/23/58/14/2358140450dfad0c69dbdc63b4978508.jpg",
+        "capacity": "55-inch",
+        "price": {
+          "currency": "REAL",
+          "value": 450000,
+          "converted": {
+            "currency": "USD",
+            "value": 400.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Hisense 32-inch LED TV",
+        "image": "https://i.pinimg.com/736x/15/9e/42/159e42886bbfc23104877e1187baed70.jpg",
+        "capacity": "32-inch",
+        "price": {
+          "currency": "REAL",
+          "value": 150000,
+          "converted": {
+            "currency": "USD",
+            "value": 130.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Samsung 7kg Front Load Washing Machine",
+        "image": "https://i.pinimg.com/736x/6a/68/51/6a68511879c48fb9b8a2db33608e4bd8.jpg",
+        "capacity": "7kg",
+        "price": {
+          "currency": "REAL",
+          "value": 280000,
+          "converted": {
+            "currency": "USD",
+            "value": 250.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Electrolux 10kg Front Load Washing Machine",
+        "image": "https://i.pinimg.com/736x/0e/0f/9b/0e0f9b8657c033fa68f7cb4ae127ebf6.jpg",
+        "capacity": "10kg",
+        "price": {
+          "currency": "REAL",
+          "value": 450000,
+          "converted": {
+            "currency": "USD",
+            "value": 400.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "LG 8kg Top Load Washing Machine",
+        "image": "https://i.pinimg.com/736x/df/0b/76/df0b769729ddb64cee4a1bebc80a51d0.jpg",
+        "capacity": "8kg",
+        "price": {
+          "currency": "REAL",
+          "value": 380000,
+          "converted": {
+            "currency": "USD",
+            "value": 340.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Panasonic 4K Smart TV 60-inch",
+        "image": "https://i.pinimg.com/736x/cd/14/fa/cd14fa7738b0c668d192beed44273059.jpg",
+        "capacity": "60-inch",
+        "price": {
+          "currency": "REAL",
+          "value": 550000,
+          "converted": {
+            "currency": "USD",
+            "value": 500.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Vizio 70-inch 4K Smart TV",
+        "image": "https://i.pinimg.com/736x/a1/59/64/a159643d50d13e9ded3c35347a9d366e.jpg",
+        "capacity": "70-inch",
+        "price": {
+          "currency": "REAL",
+          "value": 600000,
+          "converted": {
+            "currency": "USD",
+            "value": 540.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Miele 8kg Front Load Washing Machine",
+        "image": "https://i.pinimg.com/736x/3c/bd/9c/3cbd9cf8d1ab1f88bf1dfb54900d6711.jpg",
+        "capacity": "8kg",
+        "price": {
+          "currency": "REAL",
+          "value": 420000,
+          "converted": {
+            "currency": "USD",
+            "value": 380.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Sharp 60-inch Smart TV",
+        "image": "https://i.pinimg.com/736x/88/79/1e/88791ea7b2ebb372a0cbeec9a660e684.jpg",
+        "capacity": "60-inch",
+        "price": {
+          "currency": "REAL",
+          "value": 470000,
+          "converted": {
+            "currency": "USD",
+            "value": 420.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Beko 8kg Front Load Washing Machine",
+        "image": "https://i.pinimg.com/736x/cd/7e/dc/cd7edc8d6221f35a2e03b3458f65fcd3.jpg",
+        "capacity": "8kg",
+        "price": {
+          "currency": "REAL",
+          "value": 350000,
+          "converted": {
+            "currency": "USD",
+            "value": 310.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    },
+    {
+      "product": {
+        "name": "Haier 7kg Front Load Washing Machine",
+        "image": "https://i.pinimg.com/736x/c8/17/e7/c817e7bd0017fe5343e186b8cd84f4ca.jpg",
+        "capacity": "7kg",
+        "price": {
+          "currency": "REAL",
+          "value": 320000,
+          "converted": {
+            "currency": "USD",
+            "value": 290.0
+          }
+        },
+        "actions": {
+          "add_to_cart": true,
+          "favorite": true
+        }
+      }
+    }
+  ]
+}

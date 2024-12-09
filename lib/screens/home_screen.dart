@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:vmart/models/boxeddeals.dart';
 import 'package:vmart/models/survival_model.dart';
 import 'package:vmart/screens/categorie_screen.dart';
 import 'package:vmart/screens/profile_screen.dart';
 import 'package:vmart/screens/search_screen.dart';
+import 'package:vmart/services/boxeddeals_service.dart';
 import 'package:vmart/services/suvival_service.dart';
 import 'package:vmart/widgets/Features_widget.dart';
 
@@ -203,18 +205,78 @@ class _HomeContentScreenState extends State<HomeContentScreen> {
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 10),
                       child: TextButton(
-                          onPressed: () {
-                            print("View All");
-                          },
-                          child: const Text("View All",
-                              style: TextStyle(color: Colors.blue))),
+                        onPressed: () {
+                          print("View All");
+                        },
+                        child: const Text(
+                          "View All",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ),
                     )
                   ],
                 ),
               ),
-              const Survival()
+              const Survival(),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Boxed Deals ",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 60, vertical: 10),
+                      child: TextButton(
+                        onPressed: () {
+                          print("View All");
+                        },
+                        child: const Text(
+                          "View All",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              const Boxed(),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Purrfectly Deliccius ",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 10),
+                      child: TextButton(
+                        onPressed: () {
+                          print("View All");
+                        },
+                        child: const Text(
+                          "View All",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              const Purrfectly()
             ],
           ),
         ],
@@ -236,6 +298,192 @@ class _HomeContentScreenState extends State<HomeContentScreen> {
   }
 }
 
+class Purrfectly extends StatelessWidget {
+  const Purrfectly({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [],
+    );
+  }
+}
+
+//Boxed=============================================================================
+class Boxed extends StatefulWidget {
+  const Boxed({super.key});
+
+  @override
+  State<Boxed> createState() => _BoxedState();
+}
+
+class _BoxedState extends State<Boxed> {
+  late Future<List<Boxeddeals>> _boxedState;
+
+  @override
+  void initState() {
+    super.initState();
+    _boxedState = loadBoxeddealItems();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<List<Boxeddeals>>(
+      future: _boxedState,
+      builder: (context, snapshots) {
+        if (snapshots.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshots.hasError) {
+          return Center(
+            child: Text('Error: ${snapshots.error}'),
+          );
+        } else if (!snapshots.hasData || snapshots.data!.isEmpty) {
+          return const Center(
+            child: Text('No Survival Essentials'),
+          );
+        } else {
+          final boxedStateItems = snapshots.data!;
+          return SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: boxedStateItems.map((boxedStateItem) {
+                return buildBoxedStateCard(boxedStateItem);
+              }).toList(),
+            ),
+          );
+        }
+      },
+    );
+  }
+
+  Widget buildBoxedStateCard(Boxeddeals boxedStateItem) {
+    bool isAddedToCart = boxedStateItem.addToCart;
+    return Column(
+      children: [
+        Card(
+          shape: const RoundedRectangleBorder(),
+          child: Container(
+            width: 150,
+            height: 230,
+            color: Colors.white,
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        setState(() {
+                          boxedStateItem.favorite = !boxedStateItem.favorite;
+                        });
+                        print(boxedStateItem.favorite
+                            ? "Added to favorites"
+                            : "Removed from favorites");
+                      },
+                      icon: const Icon(Icons.favorite),
+                      color: boxedStateItem.favorite
+                          ? Colors.grey[200]
+                          : const Color.fromARGB(255, 15, 206, 171),
+                    ),
+                  ],
+                ),
+                Expanded(
+                  child: Image.network(
+                    boxedStateItem.image,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(boxedStateItem.volume),
+                ),
+                Container(
+                  color: Colors.grey[400],
+                  width: 150,
+                  height: 50,
+                  child: TextButton(
+                    onPressed: () {
+                      setState(() {
+                        isAddedToCart = !isAddedToCart;
+                        boxedStateItem.addToCart = isAddedToCart;
+                      });
+                      print(isAddedToCart
+                          ? "Added to cart"
+                          : "Removed from cart");
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStateProperty.all(
+                        isAddedToCart
+                            ? Colors.grey[400]
+                            : const Color.fromARGB(255, 15, 206, 171),
+                      ),
+                      shadowColor: null,
+                      backgroundBuilder: null,
+                      shape: WidgetStateProperty.all(
+                        const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.zero),
+                      ),
+                    ),
+                    child: const Text(
+                      "ADD TO CART",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 150,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Text(
+                  boxedStateItem.name,
+                  style: const TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5),
+                child: Row(
+                  children: [
+                    Text(
+                      "${boxedStateItem.localValue.toStringAsFixed(2)} ${boxedStateItem.localCutrrency}",
+                      style: const TextStyle(
+                        color: Color.fromARGB(255, 15, 206, 171),
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                children: [
+                  Text(
+                    "${boxedStateItem.convertedValue.toStringAsFixed(2)} ${boxedStateItem.covertedCurremcy}",
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}
+
+//survival class====================================================================================================
 class Survival extends StatefulWidget {
   const Survival({super.key});
 
@@ -279,98 +527,127 @@ class _SurvivalState extends State<Survival> {
   }
 
   Widget _buildSurvivalCard(SurvivalModel survivalItem) {
-    bool isAddedToCart = survivalItem.addToCart; // Track cart state
+    bool isAddedToCart = survivalItem.addToCart;
 
-    return Card(
-      shape: const RoundedRectangleBorder(),
-      child: Container(
-        width: 150,
-        height: 350,
-        color: Colors.white,
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+    return Column(
+      children: [
+        Card(
+          shape: const RoundedRectangleBorder(),
+          child: Container(
+            width: 150,
+            height: 230,
+            color: Colors.white,
+            child: Column(
               children: [
-                IconButton(
-                  onPressed: () {
-                    setState(() {
-                      survivalItem.favoritte = !survivalItem.favoritte;
-                    });
-                    print(survivalItem.favoritte
-                        ? "Added to favorites"
-                        : "Removed from favorites");
-                  },
-                  icon: const Icon(Icons.favorite),
-                  color: survivalItem.favoritte
-                      ? Colors.grey[200]
-                      : Colors.red[600],
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        setState(() {
+                          survivalItem.favoritte = !survivalItem.favoritte;
+                        });
+                        print(survivalItem.favoritte
+                            ? "Added to favorites"
+                            : "Removed from favorites");
+                      },
+                      icon: const Icon(Icons.favorite),
+                      color: survivalItem.favoritte
+                          ? Colors.grey[200]
+                          : const Color.fromARGB(255, 15, 206, 171),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            Expanded(
-              child: Image.network(
-                survivalItem.image,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Text(survivalItem.volume),
-            ),
-            Container(
-              color: Colors.grey[400],
-              width: 150,
-              child: TextButton(
-                onPressed: () {
-                  setState(() {
-                    isAddedToCart = !isAddedToCart;
-                    survivalItem.addToCart = isAddedToCart;
-                  });
-                  print(isAddedToCart ? "Added to cart" : "Removed from cart");
-                },
-                style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(
-                    isAddedToCart
-                        ? Colors.grey[400]
-                        : const Color.fromARGB(255, 15, 206, 171),
+                Expanded(
+                  child: Image.network(
+                    survivalItem.image,
                   ),
-                  shape: WidgetStateProperty.all(
-                    const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.zero),
-                  ),
-                ),
-                child: const Text(
-                  "ADD TO CART",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20),
-                  child: Text(survivalItem.name),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  child: Row(
-                    children: [
-                      Text(
-                        "${survivalItem.value}  Real",
-                        style: const TextStyle(
-                          color: Color.fromARGB(255, 15, 206, 171),
-                        ),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(survivalItem.volume),
+                ),
+                Container(
+                  color: Colors.grey[400],
+                  width: 150,
+                  height: 50,
+                  child: TextButton(
+                    onPressed: () {
+                      setState(() {
+                        isAddedToCart = !isAddedToCart;
+                        survivalItem.addToCart = isAddedToCart;
+                      });
+                      print(isAddedToCart
+                          ? "Added to cart"
+                          : "Removed from cart");
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStateProperty.all(
+                        isAddedToCart
+                            ? Colors.grey[400]
+                            : const Color.fromARGB(255, 15, 206, 171),
                       ),
-                    ],
+                      shadowColor: null,
+                      backgroundBuilder: null,
+                      shape: WidgetStateProperty.all(
+                        const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.zero),
+                      ),
+                    ),
+                    child: const Text(
+                      "ADD TO CART",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
                   ),
-                )
+                ),
               ],
-            )
-          ],
+            ),
+          ),
         ),
-      ),
+        SizedBox(
+          width: 150,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Text(
+                  survivalItem.name,
+                  style: const TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5),
+                child: Row(
+                  children: [
+                    Text(
+                      "${survivalItem.localValue.toStringAsFixed(2)} ${survivalItem.localCurrency}",
+                      style: const TextStyle(
+                        color: Color.fromARGB(255, 15, 206, 171),
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                children: [
+                  Text(
+                    "${survivalItem.convertedValue.toStringAsFixed(2)} ${survivalItem.convertedCurrency}",
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        )
+      ],
     );
   }
 }

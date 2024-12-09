@@ -1,0 +1,363 @@
+[
+  {
+    "product": {
+      "name": "Biscolate Chocolate Cream",
+      "image": "https://i.pinimg.com/736x/2c/16/22/2c1622a375b60cdd0eecf5b231c4e51d.jpg",
+      "volume": "12x50g",
+      "price": {
+        "currency": "REAL",
+        "value": 15000,
+        "converted": {
+          "currency": "USD",
+          "value": 15.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Ulker Abeni Value Pack",
+      "image": "https://i.pinimg.com/736x/34/67/e4/3467e4628dfc7a24c5f5e152fae76cba.jpg",
+      "volume": "18x52g",
+      "price": {
+        "currency": "REAL",
+        "value": 22000,
+        "converted": {
+          "currency": "USD",
+          "value": 20.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Nestle Nesquik Chocolate Bars",
+      "image": "https://i.pinimg.com/736x/8d/a8/9d/8da89d51839af18a178cdfff23e679fd.jpg",
+      "volume": "10x39g",
+      "price": {
+        "currency": "REAL",
+        "value": 14000,
+        "converted": {
+          "currency": "USD",
+          "value": 14.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Kinder Delice Premium Pack",
+      "image": "https://i.pinimg.com/736x/ef/a4/0f/efa40f26a2969bc3c8f966dc88699684.jpg",
+      "volume": "6x200g",
+      "price": {
+        "currency": "REAL",
+        "value": 28000,
+        "converted": {
+          "currency": "USD",
+          "value": 25.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Pure Water Pack of 6",
+      "image": "https://i.pinimg.com/736x/ad/fd/91/adfd91f55807fabd116ccb0c39793a86.jpg",
+      "volume": "6x2L",
+      "price": {
+        "currency": "REAL",
+        "value": 10000,
+        "converted": {
+          "currency": "USD",
+          "value": 8.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Golden Crunch Biscuits",
+      "image": "https://i.pinimg.com/736x/7b/0d/c4/7b0dc480b509a9a85d05b282e3e9cd8d.jpg",
+      "volume": "24x40g",
+      "price": {
+        "currency": "REAL",
+        "value": 17000,
+        "converted": {
+          "currency": "USD",
+          "value": 16.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Almond Joy Chocolate Bar",
+      "image": "https://i.pinimg.com/736x/39/61/7f/39617f612c7ddb6c3ef7c80987fe10eb.jpg",
+      "volume": "4x40g",
+      "price": {
+        "currency": "REAL",
+        "value": 10000,
+        "converted": {
+          "currency": "USD",
+          "value": 9.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Crunchy Caramel Popcorn",
+      "image": "https://i.pinimg.com/736x/47/c6/b7/47c6b768cd00e52032614165648ca171.jpg",
+      "volume": "200g",
+      "price": {
+        "currency": "REAL",
+        "value": 12000,
+        "converted": {
+          "currency": "USD",
+          "value": 11.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Coca-Cola 1L Bottle",
+      "image": "https://i.pinimg.com/736x/ef/75/7a/ef757a0d9322a1259bf17838bfe84126.jpg",
+      "volume": "1L",
+      "price": {
+        "currency": "REAL",
+        "value": 8000,
+        "converted": {
+          "currency": "USD",
+          "value": 7.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Peanut M&M's",
+      "image": "https://i.pinimg.com/736x/d3/35/f8/d335f8d1b5ce097e0ea0b4ed59cb30bd.jpg",
+      "volume": "250g",
+      "price": {
+        "currency": "REAL",
+        "value": 13000,
+        "converted": {
+          "currency": "USD",
+          "value": 12.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Chips Ahoy! Cookies",
+      "image": "https://i.pinimg.com/736x/6f/98/ef/6f98ef44bb3b7512f6065fe031991d35.jpg",
+      "volume": "300g",
+      "price": {
+        "currency": "REAL",
+        "value": 15000,
+        "converted": {
+          "currency": "USD",
+          "value": 13.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Heineken Beer Pack",
+      "image": "https://i.pinimg.com/736x/48/d1/21/48d1213727b7b2a450c6ede80bab5ae5.jpg",
+      "volume": "6x330ml",
+      "price": {
+        "currency": "REAL",
+        "value": 30000,
+        "converted": {
+          "currency": "USD",
+          "value": 27.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "KitKat Chocolate Bars",
+      "image": "https://i.pinimg.com/736x/24/ce/ab/24ceab946d4115d541481014d33b7155.jpg",
+      "volume": "12x45g",
+      "price": {
+        "currency": "REAL",
+        "value": 16000,
+        "converted": {
+          "currency": "USD",
+          "value": 14.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Coco Pops Cereal",
+      "image": "https://i.pinimg.com/736x/60/0a/55/600a5553d61811a53780010c7f443cb5.jpg",
+      "volume": "350g",
+      "price": {
+        "currency": "REAL",
+        "value": 10000,
+        "converted": {
+          "currency": "USD",
+          "value": 8.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Nestle Milo Chocolate Drink",
+      "image": "https://i.pinimg.com/736x/db/4f/e6/db4fe64a3fb86dd01f140894aa4bc4db.jpg",
+      "volume": "200g",
+      "price": {
+        "currency": "REAL",
+        "value": 12000,
+        "converted": {
+          "currency": "USD",
+          "value": 11.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Red Bull Energy Drink",
+      "image": "https://i.pinimg.com/736x/f3/a4/ca/f3a4ca5e9e3ff9e0dcd7f902ea81c1d7.jpg",
+      "volume": "250ml",
+      "price": {
+        "currency": "REAL",
+        "value": 8000,
+        "converted": {
+          "currency": "USD",
+          "value": 7.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Chobani Yogurt",
+      "image": "https://i.pinimg.com/736x/49/29/d7/4929d7aafe65a348688db7119e8403ea.jpg",
+      "volume": "6x150g",
+      "price": {
+        "currency": "REAL",
+        "value": 24000,
+        "converted": {
+          "currency": "USD",
+          "value": 22.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Tropicana Orange Juice",
+      "image": "https://i.pinimg.com/736x/5a/4c/41/5a4c413050c39ac652e3b7ecb61426d9.jpg",
+      "volume": "1L",
+      "price": {
+        "currency": "REAL",
+        "value": 15000,
+        "converted": {
+          "currency": "USD",
+          "value": 13.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Mentos Mint Candy",
+      "image": "https://i.pinimg.com/736x/a2/b5/8f/a2b58f853aeb3e467e4d70d43eb7955a.jpg",
+      "volume": "5x38g",
+      "price": {
+        "currency": "REAL",
+        "value": 5000,
+        "converted": {
+          "currency": "USD",
+          "value": 4.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  }
+]

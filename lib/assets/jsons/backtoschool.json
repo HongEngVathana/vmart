@@ -1,0 +1,363 @@
+[
+  {
+    "product": {
+      "name": "Backpack Set",
+      "image": "https://i.pinimg.com/736x/f2/17/58/f217586741bac8c8962e6a7f8c95db1e.jpg",
+      "volume": "1 set",
+      "price": {
+        "currency": "USD",
+        "value": 30.0,
+        "converted": {
+          "currency": "USD",
+          "value": 30.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Notebook Pack",
+      "image": "https://i.pinimg.com/736x/87/8d/80/878d807ce52b758f465cdb28c978655c.jpg",
+      "volume": "5 pack",
+      "price": {
+        "currency": "USD",
+        "value": 12.0,
+        "converted": {
+          "currency": "USD",
+          "value": 12.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Pencil Case",
+      "image": "https://i.pinimg.com/736x/d1/ed/26/d1ed2654c4d444a826a7356c8a04357a.jpg",
+      "volume": "1 case",
+      "price": {
+        "currency": "USD",
+        "value": 5.0,
+        "converted": {
+          "currency": "USD",
+          "value": 5.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Math Set",
+      "image": "https://i.pinimg.com/736x/66/3d/75/663d755ad4e803491b752f23e022ee68.jpg",
+      "volume": "1 set",
+      "price": {
+        "currency": "USD",
+        "value": 8.0,
+        "converted": {
+          "currency": "USD",
+          "value": 8.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Crayons Pack",
+      "image": "https://i.pinimg.com/736x/4e/3d/3e/4e3d3eecafa2b3d903590513cb3017a4.jpg",
+      "volume": "24 colors",
+      "price": {
+        "currency": "USD",
+        "value": 6.0,
+        "converted": {
+          "currency": "USD",
+          "value": 6.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Glue Stick",
+      "image": "https://i.pinimg.com/736x/17/17/a0/1717a08c837b15e77d72023fda64a266.jpg",
+      "volume": "1 stick",
+      "price": {
+        "currency": "USD",
+        "value": 2.5,
+        "converted": {
+          "currency": "USD",
+          "value": 2.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Scissors",
+      "image": "https://i.pinimg.com/736x/b9/de/15/b9de154b3f0a03c6c8ffe9279dbb75b2.jpg",
+      "volume": "1 pair",
+      "price": {
+        "currency": "USD",
+        "value": 3.0,
+        "converted": {
+          "currency": "USD",
+          "value": 3.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Colored Markers",
+      "image": "https://i.pinimg.com/474x/54/fb/70/54fb704236dbc3d22b222977eaea5f36.jpg",
+      "volume": "12 colors",
+      "price": {
+        "currency": "USD",
+        "value": 8.0,
+        "converted": {
+          "currency": "USD",
+          "value": 8.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Binder Clips",
+      "image": "https://i.pinimg.com/736x/eb/35/40/eb3540d8b127f96a631856168b335e12.jpg",
+      "volume": "10 pack",
+      "price": {
+        "currency": "USD",
+        "value": 4.0,
+        "converted": {
+          "currency": "USD",
+          "value": 4.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Ruler",
+      "image": "https://i.pinimg.com/736x/a8/40/58/a840585ab14cc244fc2f3d31b1f83883.jpg",
+      "volume": "1 ruler",
+      "price": {
+        "currency": "USD",
+        "value": 1.0,
+        "converted": {
+          "currency": "USD",
+          "value": 1.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Water Bottle",
+      "image": "https://i.pinimg.com/736x/3d/f9/98/3df99821e5f352dcbdd0bb34c5fb1bdf.jpg",
+      "volume": "1 liter",
+      "price": {
+        "currency": "USD",
+        "value": 6.0,
+        "converted": {
+          "currency": "USD",
+          "value": 6.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Lunch Box",
+      "image": "https://i.pinimg.com/736x/6c/e4/12/6ce412fbae71cd007535ba65646ad6bf.jpg",
+      "volume": "1 box",
+      "price": {
+        "currency": "USD",
+        "value": 10.0,
+        "converted": {
+          "currency": "USD",
+          "value": 10.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Pencil Set",
+      "image": "https://i.pinimg.com/736x/cb/fc/2a/cbfc2a47278363732d164c5262501e49.jpg",
+      "volume": "10 pencils",
+      "price": {
+        "currency": "USD",
+        "value": 3.0,
+        "converted": {
+          "currency": "USD",
+          "value": 3.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Eraser",
+      "image": "https://i.pinimg.com/736x/e8/ca/dc/e8cadc1b1991c33656a9ed70af6bad9c.jpg",
+      "volume": "1 eraser",
+      "price": {
+        "currency": "USD",
+        "value": 1.5,
+        "converted": {
+          "currency": "USD",
+          "value": 1.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Highlighter Set",
+      "image": "https://i.pinimg.com/736x/7c/77/6a/7c776a81bf1b0ebf122d54e73a5e5540.jpg",
+      "volume": "5 colors",
+      "price": {
+        "currency": "USD",
+        "value": 6.0,
+        "converted": {
+          "currency": "USD",
+          "value": 6.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Calculator",
+      "image": "https://i.pinimg.com/736x/d5/a7/90/d5a7904661a1b8d13936e37d1b10b2d3.jpg",
+      "volume": "1 calculator",
+      "price": {
+        "currency": "USD",
+        "value": 15.0,
+        "converted": {
+          "currency": "USD",
+          "value": 15.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Sticky Notes",
+      "image": "https://i.pinimg.com/736x/7b/8c/e8/7b8ce8a51ec3b178cf9a0fc0ea9297cc.jpg",
+      "volume": "1 pack",
+      "price": {
+        "currency": "USD",
+        "value": 2.5,
+        "converted": {
+          "currency": "USD",
+          "value": 2.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Folder Set",
+      "image": "https://i.pinimg.com/736x/f6/a0/71/f6a071128ce5ff966b3774b862f09a7f.jpg",
+      "volume": "10 folders",
+      "price": {
+        "currency": "USD",
+        "value": 8.0,
+        "converted": {
+          "currency": "USD",
+          "value": 8.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Paper Clips",
+      "image": "https://i.pinimg.com/736x/a5/d3/57/a5d357db68b67acbb202044947ecf4e7.jpg",
+      "volume": "100 clips",
+      "price": {
+        "currency": "USD",
+        "value": 2.0,
+        "converted": {
+          "currency": "USD",
+          "value": 2.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  }
+]

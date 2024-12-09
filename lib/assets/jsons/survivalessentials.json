@@ -5,7 +5,7 @@
       "image": "https://i.pinimg.com/736x/ad/fd/91/adfd91f55807fabd116ccb0c39793a86.jpg",
       "volume": "6x2 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 18000,
         "converted": {
           "currency": "USD",
@@ -24,7 +24,7 @@
       "image": "https://i.pinimg.com/736x/36/86/d4/3686d4cb2008d1e252c5b0351f52753a.jpg",
       "volume": "12x1.5 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 19000,
         "converted": {
           "currency": "USD",
@@ -43,7 +43,7 @@
       "image": "https://i.pinimg.com/736x/bd/f5/85/bdf58579ce3cd03d03b103fdbeaa8444.jpg",
       "volume": "2x5 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 20000,
         "converted": {
           "currency": "USD",
@@ -62,7 +62,7 @@
       "image": "https://i.pinimg.com/736x/b8/15/f7/b815f70ba2463f6e491388699d2fa26a.jpg",
       "volume": "6x1 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 30000,
         "converted": {
           "currency": "USD",
@@ -81,7 +81,7 @@
       "image": "https://i.pinimg.com/736x/e1/6c/2a/e16c2a35d8550a6de77898f7d2f1b433.jpg",
       "volume": "6x1.5 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 40000,
         "converted": {
           "currency": "USD",
@@ -100,7 +100,7 @@
       "image": "https://i.pinimg.com/736x/96/b3/af/96b3af74ee4ed9c5ddc060719b1f6bb2.jpg",
       "volume": "24x0.5 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 50000,
         "converted": {
           "currency": "USD",
@@ -119,7 +119,7 @@
       "image": "https://i.pinimg.com/736x/ac/99/eb/ac99ebaa1dbf35e614e7f8bca9e11607.jpg",
       "volume": "12x1 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 60000,
         "converted": {
           "currency": "USD",
@@ -138,7 +138,7 @@
       "image": "https://i.pinimg.com/736x/5d/97/d4/5d97d4653b19694659d85a72720c4a57.jpg",
       "volume": "4x2 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 70000,
         "converted": {
           "currency": "USD",
@@ -157,7 +157,7 @@
       "image": "https://i.pinimg.com/736x/61/e8/64/61e864e0d01a7dab56cd7dc09605dd0b.jpg",
       "volume": "6x1.5 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 80000,
         "converted": {
           "currency": "USD",
@@ -176,7 +176,7 @@
       "image": "https://i.pinimg.com/736x/61/e8/64/61e864e0d01a7dab56cd7dc09605dd0b.jpg",
       "volume": "10x1 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 9000,
         "converted": {
           "currency": "USD",
@@ -195,7 +195,7 @@
       "image": "https://i.pinimg.com/736x/ce/fb/67/cefb67f39b75895479c47c526b637abc.jpg",
       "volume": "8x0.75 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 9500,
         "converted": {
           "currency": "USD",
@@ -214,7 +214,7 @@
       "image": "https://i.pinimg.com/736x/9a/c7/7a/9ac77ae8106eee4562b47a1aa8e2b93d.jpg",
       "volume": "24x0.33 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 7500,
         "converted": {
           "currency": "USD",
@@ -233,7 +233,7 @@
       "image": "https://i.pinimg.com/736x/15/19/ba/1519ba4d68c98bd31c1a6a8ba4a24044.jpg",
       "volume": "1x5 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 4500,
         "converted": {
           "currency": "USD",
@@ -252,7 +252,7 @@
       "image": "https://i.pinimg.com/736x/75/4b/8d/754b8dba551a912adf455b8ab16ac8c8.jpg",
       "volume": "4x1.5 L",
       "price": {
-        "currency": "LBP",
+        "currency": "REAL",
         "value": 6000,
         "converted": {
           "currency": "USD",

@@ -1,0 +1,363 @@
+[
+  {
+    "product": {
+      "name": "Fresh Red Apples 1kg",
+      "image": "https://i.pinimg.com/736x/0d/a1/dd/0da1ddcc7f1ace61cc92aea33f7a8d80.jpg",
+      "volume": "1kg",
+      "price": {
+        "currency": "REAL",
+        "value": 6000,
+        "converted": {
+          "currency": "USD",
+          "value": 5.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Bananas Bunch (5-6 pcs)",
+      "image": "https://i.pinimg.com/736x/02/49/5f/02495fb1b8bd32a24fb8eb483a18a074.jpg",
+      "volume": "1 bunch",
+      "price": {
+        "currency": "REAL",
+        "value": 4000,
+        "converted": {
+          "currency": "USD",
+          "value": 3.3
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Organic Blueberries 250g",
+      "image": "https://i.pinimg.com/736x/13/37/d4/1337d4cf51b13aede86e76e2cc92ad40.jpg",
+      "volume": "250g",
+      "price": {
+        "currency": "REAL",
+        "value": 10000,
+        "converted": {
+          "currency": "USD",
+          "value": 8.3
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Juicy Oranges 2kg",
+      "image": "https://i.pinimg.com/736x/15/43/1b/15431b6a90a4e154a2db8b036f0e2640.jpg",
+      "volume": "2kg",
+      "price": {
+        "currency": "REAL",
+        "value": 12000,
+        "converted": {
+          "currency": "USD",
+          "value": 10.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Fresh Strawberries 500g",
+      "image": "https://i.pinimg.com/736x/7d/43/72/7d43720a2a71204d34589a5acb9482d2.jpg",
+      "volume": "500g",
+      "price": {
+        "currency": "REAL",
+        "value": 15000,
+        "converted": {
+          "currency": "USD",
+          "value": 12.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Watermelon Slice 2kg",
+      "image": "https://i.pinimg.com/736x/29/df/32/29df328e105a4a7799dbe84c0324f08d.jpg",
+      "volume": "2kg",
+      "price": {
+        "currency": "REAL",
+        "value": 8000,
+        "converted": {
+          "currency": "USD",
+          "value": 6.7
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Kiwi Pack 4 pcs",
+      "image": "https://i.pinimg.com/736x/d6/6b/25/d66b257fa3fb12c27b3b0e5f9ebf3885.jpg",
+      "volume": "4 pcs",
+      "price": {
+        "currency": "REAL",
+        "value": 7000,
+        "converted": {
+          "currency": "USD",
+          "value": 5.8
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Grapes (Green) 1kg",
+      "image": "https://i.pinimg.com/736x/2b/6b/3d/2b6b3d87b8c448e46cca0d2a9fa1a7ae.jpg",
+      "volume": "1kg",
+      "price": {
+        "currency": "REAL",
+        "value": 11000,
+        "converted": {
+          "currency": "USD",
+          "value": 9.2
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Mangoes (3 pcs)",
+      "image": "https://i.pinimg.com/736x/cd/05/2a/cd052a211f30b42b2d9d73e78c9eae31.jpg",
+      "volume": "3 pcs",
+      "price": {
+        "currency": "REAL",
+        "value": 6000,
+        "converted": {
+          "currency": "USD",
+          "value": 5.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Pineapple (Medium)",
+      "image": "https://i.pinimg.com/474x/0a/02/53/0a02531be9b2e56383f1bee12858cc04.jpg",
+      "volume": "1 medium",
+      "price": {
+        "currency": "REAL",
+        "value": 5000,
+        "converted": {
+          "currency": "USD",
+          "value": 4.2
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Avocado (2 pcs)",
+      "image": "https://i.pinimg.com/736x/5f/40/3e/5f403e7617012a8ad7922fcbe34bc8be.jpg",
+      "volume": "2 pcs",
+      "price": {
+        "currency": "REAL",
+        "value": 8000,
+        "converted": {
+          "currency": "USD",
+          "value": 6.7
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Peaches (2 pcs)",
+      "image": "https://i.pinimg.com/736x/45/13/c9/4513c9d40bb594353a824a745edebb1d.jpg",
+      "volume": "2 pcs",
+      "price": {
+        "currency": "REAL",
+        "value": 7000,
+        "converted": {
+          "currency": "USD",
+          "value": 5.8
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Plums (4 pcs)",
+      "image": "https://i.pinimg.com/736x/9b/01/46/9b01463eb0b6c594205da78d3527d8e7.jpg",
+      "volume": "4 pcs",
+      "price": {
+        "currency": "REAL",
+        "value": 9000,
+        "converted": {
+          "currency": "USD",
+          "value": 7.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Cherries (500g)",
+      "image": "https://i.pinimg.com/736x/fd/36/d6/fd36d61ac357ae848552301c76287c26.jpg",
+      "volume": "500g",
+      "price": {
+        "currency": "REAL",
+        "value": 15000,
+        "converted": {
+          "currency": "USD",
+          "value": 12.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Papayas (2 pcs)",
+      "image": "https://i.pinimg.com/736x/d8/3c/56/d83c5646aef1bfa85dea9c9cd61b26f0.jpg",
+      "volume": "2 pcs",
+      "price": {
+        "currency": "REAL",
+        "value": 9000,
+        "converted": {
+          "currency": "USD",
+          "value": 7.5
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Dragon Fruit (1 pc)",
+      "image": "https://i.pinimg.com/736x/47/9c/80/479c80e772b2da079a31a25a90ceb378.jpg",
+      "volume": "1 pc",
+      "price": {
+        "currency": "REAL",
+        "value": 7000,
+        "converted": {
+          "currency": "USD",
+          "value": 5.8
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Lychees (500g)",
+      "image": "https://i.pinimg.com/736x/ed/cd/52/edcd525ccaeeeb3ef3f9e1302c603ccf.jpg",
+      "volume": "500g",
+      "price": {
+        "currency": "REAL",
+        "value": 8000,
+        "converted": {
+          "currency": "USD",
+          "value": 6.7
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Tangerines (6 pcs)",
+      "image": "https://i.pinimg.com/736x/b4/72/48/b47248c62e3dac2c41bd0d9c171db856.jpg",
+      "volume": "6 pcs",
+      "price": {
+        "currency": "REAL",
+        "value": 5000,
+        "converted": {
+          "currency": "USD",
+          "value": 4.2
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  },
+  {
+    "product": {
+      "name": "Pomegranate (1 pc)",
+      "image": "https://i.pinimg.com/736x/22/be/f5/22bef564f15cf38b91a6c026b6811760.jpg",
+      "volume": "1 pc",
+      "price": {
+        "currency": "REAL",
+        "value": 6000,
+        "converted": {
+          "currency": "USD",
+          "value": 5.0
+        }
+      },
+      "actions": {
+        "add_to_cart": true,
+        "favorite": true
+      }
+    }
+  }
+]
