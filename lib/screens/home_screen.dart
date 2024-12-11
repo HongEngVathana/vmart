@@ -4,12 +4,19 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:vmart/models/boxeddeals.dart';
+import 'package:vmart/models/newproduct_model.dart';
+import 'package:vmart/models/purrfectly_model.dart';
 import 'package:vmart/models/survival_model.dart';
+import 'package:vmart/models/weeklyoffers_model.dart';
 import 'package:vmart/screens/categorie_screen.dart';
 import 'package:vmart/screens/profile_screen.dart';
 import 'package:vmart/screens/search_screen.dart';
 import 'package:vmart/services/boxeddeals_service.dart';
+import 'package:vmart/services/freshpicks_service.dart';
+import 'package:vmart/services/newproduct_service.dart';
+import 'package:vmart/services/purrfectly_service.dart';
 import 'package:vmart/services/suvival_service.dart';
+import 'package:vmart/services/weeklyoffers_service.dart';
 import 'package:vmart/widgets/Features_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -276,7 +283,91 @@ class _HomeContentScreenState extends State<HomeContentScreen> {
                   ],
                 ),
               ),
-              const Purrfectly()
+              const Purrfectly(),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Weekly Offers",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 55, vertical: 10),
+                      child: TextButton(
+                        onPressed: () {
+                          print("View All");
+                        },
+                        child: const Text(
+                          "View All",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              const Weeklyoffers(),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "New Products",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 55, vertical: 10),
+                      child: TextButton(
+                        onPressed: () {
+                          print("View All");
+                        },
+                        child: const Text(
+                          "View All",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              const NewProduct(),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Fresh Picks",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 55, vertical: 10),
+                      child: TextButton(
+                        onPressed: () {
+                          print("View All");
+                        },
+                        child: const Text(
+                          "View All",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              const FreshPicks()
             ],
           ),
         ],
@@ -298,17 +389,715 @@ class _HomeContentScreenState extends State<HomeContentScreen> {
   }
 }
 
-class Purrfectly extends StatelessWidget {
-  const Purrfectly({
+class FreshPicks extends StatefulWidget {
+  const FreshPicks({super.key});
+
+  @override
+  State<FreshPicks> createState() => _FreshPicksState();
+}
+
+class _FreshPicksState extends State<FreshPicks> {
+  late Future<List<Boxeddeals>> _freshPicks;
+
+  @override
+  void initState() {
+    super.initState();
+    _freshPicks = loadFreshPicks();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<List<Boxeddeals>>(
+      future: _freshPicks,
+      builder: (context, snapshots) {
+        if (snapshots.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshots.hasError) {
+          return Center(child: Text('Error: ${snapshots.error}'));
+        } else if (!snapshots.hasData || snapshots.data!.isEmpty) {
+          return const Center(child: Text("No Survival Essentials"));
+        } else {
+          final freshPicksItems = snapshots.data!;
+          return SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: freshPicksItems.map((freshPickItem) {
+                return FreshPicksCard(
+                  boxedStateItem: freshPickItem,
+                  onFavoriteToggle: () {
+                    setState(() {
+                      freshPickItem.favorite = !freshPickItem.favorite;
+                    });
+                    print(freshPickItem.favorite
+                        ? "Added to favorites"
+                        : "Removed from favorites");
+                  },
+                  onAddToCartToggle: () {
+                    setState(() {
+                      freshPickItem.addToCart = !freshPickItem.addToCart;
+                    });
+                    print(freshPickItem.addToCart
+                        ? "Added to cart"
+                        : "Removed from cart");
+                  },
+                );
+              }).toList(),
+            ),
+          );
+        }
+      },
+    );
+  }
+}
+
+class FreshPicksCard extends StatelessWidget {
+  final Boxeddeals boxedStateItem;
+  final VoidCallback onFavoriteToggle;
+  final VoidCallback onAddToCartToggle;
+
+  const FreshPicksCard({
+    required this.boxedStateItem,
+    required this.onFavoriteToggle,
+    required this.onAddToCartToggle,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [],
+    return Column(
+      children: [
+        Card(
+          shape: const RoundedRectangleBorder(),
+          child: Container(
+            width: 150,
+            height: 230,
+            color: Colors.white,
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    IconButton(
+                      onPressed: onFavoriteToggle,
+                      icon: Icon(Icons.favorite,
+                          color: boxedStateItem.favorite
+                              ? Colors.grey[200]
+                              : Color.fromARGB(255, 15, 206, 171)),
+                    ),
+                  ],
+                ),
+                Expanded(
+                  child: Image.network(
+                    boxedStateItem.image,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(boxedStateItem.volume),
+                ),
+                Container(
+                  color: Colors.grey[400],
+                  width: 150,
+                  height: 50,
+                  child: TextButton(
+                    onPressed: onAddToCartToggle,
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          boxedStateItem.addToCart
+                              ? Colors.grey[400]!
+                              : Color.fromARGB(255, 15, 206, 171)),
+                      shape: MaterialStateProperty.all(
+                        const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.zero,
+                        ),
+                      ),
+                    ),
+                    child: Text(
+                      "ADD TO CART",
+                      style: const TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 150,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Text(
+                  boxedStateItem.name,
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5),
+                child: Row(
+                  children: [
+                    Text(
+                      "${boxedStateItem.localValue.toStringAsFixed(2)} ${boxedStateItem.localCutrrency}",
+                      style: const TextStyle(
+                        color: Color.fromARGB(255, 15, 206, 171),
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                children: [
+                  Text(
+                    "${boxedStateItem.convertedValue.toStringAsFixed(2)} ${boxedStateItem.covertedCurremcy}",
+                    style: const TextStyle(fontSize: 14, color: Colors.black),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
+}
+
+class NewProduct extends StatefulWidget {
+  const NewProduct({
+    super.key,
+  });
+
+  @override
+  State<NewProduct> createState() => _NewProductState();
+}
+
+class _NewProductState extends State<NewProduct> {
+  late Future<List<NewproductModel>> _newproduct;
+
+  @override
+  void initState() {
+    super.initState();
+    _newproduct = loadnewproduct();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<List<NewproductModel>>(
+      future: _newproduct,
+      builder: (context, snapshots) {
+        if (snapshots.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshots.hasError) {
+          return Center(child: Text('Error: ${snapshots.error}'));
+        } else if (!snapshots.hasData || snapshots.data!.isEmpty) {
+          return const Center(child: Text("No Survival Essentials"));
+        } else {
+          final newProductItems = snapshots.data!;
+          return SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: newProductItems.map((newProductItem) {
+                return NewProductCard(
+                  item: newProductItem,
+                  onFavoriteToggle: () {
+                    setState(() {
+                      newProductItem.favoritte = !newProductItem.favoritte;
+                    });
+                  },
+                  onAddToCartToggle: () {
+                    setState(() {
+                      newProductItem.addToCart = !newProductItem.addToCart;
+                    });
+                  },
+                );
+              }).toList(),
+            ),
+          );
+        }
+      },
+    );
+  }
+}
+
+class NewProductCard extends StatelessWidget {
+  final NewproductModel item;
+  final VoidCallback onFavoriteToggle;
+  final VoidCallback onAddToCartToggle;
+
+  const NewProductCard({
+    Key? key,
+    required this.item,
+    required this.onFavoriteToggle,
+    required this.onAddToCartToggle,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Card(
+          shape: const RoundedRectangleBorder(),
+          child: Container(
+            width: 150,
+            height: 230,
+            color: Colors.white,
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    IconButton(
+                      onPressed: onFavoriteToggle,
+                      icon: Icon(Icons.favorite,
+                          color: item.favoritte
+                              ? Colors.grey[200]
+                              : const Color.fromARGB(255, 15, 206, 171)),
+                    ),
+                  ],
+                ),
+                Expanded(
+                  child: Image.network(item.image),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(item.volume),
+                ),
+                Container(
+                  color: Colors.grey[400],
+                  width: 150,
+                  height: 50,
+                  child: TextButton(
+                    onPressed: onAddToCartToggle,
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStateProperty.all(
+                        item.addToCart
+                            ? Colors.grey[400]
+                            : const Color.fromARGB(255, 15, 206, 171),
+                      ),
+                      shadowColor: null,
+                      backgroundBuilder: null,
+                      shape: WidgetStateProperty.all(
+                        const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.zero),
+                      ),
+                    ),
+                    child: const Text(
+                      "ADD TO CART",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 150,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Text(
+                  item.name,
+                  style: const TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5),
+                child: Row(
+                  children: [
+                    Text(
+                      "${item.localValue.toStringAsFixed(2)} ${item.localCurrency}",
+                      style: const TextStyle(
+                        color: Color.fromARGB(255, 15, 206, 171),
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                children: [
+                  Text(
+                    "${item.convertedValue.toStringAsFixed(2)} ${item.convertedCurrency}",
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}
+
+class Weeklyoffers extends StatefulWidget {
+  const Weeklyoffers({super.key});
+
+  @override
+  State<Weeklyoffers> createState() => _WeeklyoffersState();
+}
+
+class _WeeklyoffersState extends State<Weeklyoffers> {
+  late Future<List<WeeklyoffersModel>> __weeklyoffersmodel;
+
+  @override
+  void initState() {
+    super.initState();
+    __weeklyoffersmodel = loadweeklyoffers();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<List<WeeklyoffersModel>>(
+      future: __weeklyoffersmodel,
+      builder: (context, snapshots) {
+        if (snapshots.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshots.hasError) {
+          return Center(child: Text('Error: ${snapshots.error}'));
+        } else if (!snapshots.hasData || snapshots.data!.isEmpty) {
+          return const Center(child: Text("No Survival Essentials"));
+        } else {
+          final weeklyOfferItems = snapshots.data!;
+          return SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: weeklyOfferItems.map((item) {
+                return BuildWeeklyCard(
+                  item: item,
+                  onFavoriteToggle: () {
+                    setState(() {
+                      item.favorite = !item.favorite;
+                    });
+                  },
+                  onAddToCartToggle: () {
+                    setState(() {
+                      item.addToCart = !item.addToCart;
+                    });
+                  },
+                );
+              }).toList(),
+            ),
+          );
+        }
+      },
+    );
+  }
+}
+
+class BuildWeeklyCard extends StatelessWidget {
+  final WeeklyoffersModel item;
+  final VoidCallback onFavoriteToggle;
+  final VoidCallback onAddToCartToggle;
+
+  const BuildWeeklyCard({
+    Key? key,
+    required this.item,
+    required this.onFavoriteToggle,
+    required this.onAddToCartToggle,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Card(
+          shape: const RoundedRectangleBorder(),
+          child: Container(
+            width: 150,
+            height: 230,
+            color: Colors.white,
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    IconButton(
+                      onPressed: onFavoriteToggle,
+                      icon: Icon(Icons.favorite,
+                          color: item.favorite
+                              ? Colors.grey[200]
+                              : Color.fromARGB(255, 15, 206, 171)),
+                    ),
+                  ],
+                ),
+                Expanded(
+                  child: Image.network(item.image),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(item.volume),
+                ),
+                Container(
+                  color: Colors.grey[400],
+                  width: 150,
+                  height: 50,
+                  child: TextButton(
+                    onPressed: onAddToCartToggle,
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStateProperty.all(
+                        item.addToCart
+                            ? Colors.grey[400]
+                            : const Color.fromARGB(255, 15, 206, 171),
+                      ),
+                      shadowColor: null,
+                      backgroundBuilder: null,
+                      shape: WidgetStateProperty.all(
+                        const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.zero),
+                      ),
+                    ),
+                    child: const Text(
+                      "ADD TO CART",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 150,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Text(
+                  item.name,
+                  style: const TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5),
+                child: Row(
+                  children: [
+                    Text(
+                      "${item.localValue.toStringAsFixed(2)} ${item.localCurrency}",
+                      style: const TextStyle(
+                        color: Color.fromARGB(255, 15, 206, 171),
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                children: [
+                  Text(
+                    "${item.convertedValue.toStringAsFixed(2)} ${item.convertedCurrency}",
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}
+
+//Purrfectly==================================================================
+
+class Purrfectly extends StatefulWidget {
+  const Purrfectly({
+    super.key,
+  });
+
+  @override
+  State<Purrfectly> createState() => _PurrfectlyState();
+}
+
+class _PurrfectlyState extends State<Purrfectly> {
+  late Future<List<PurrfectlyModel>> _boxedState;
+
+  List<PurrfectlyModel> _currentBoxedState = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _boxedState = loadPurrfectly();
+  }
+
+  void toggleFavorite(PurrfectlyModel item) {
+    setState(() {
+      item.favorite = !item.favorite;
+    });
+    print(item.favorite ? "Added to favorites" : "Removed from favorites");
+  }
+
+  void toggleCart(PurrfectlyModel item) {
+    setState(() {
+      item.addToCart = !item.addToCart;
+    });
+    print(item.addToCart ? "Added to cart" : "Removed from cart");
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<List<PurrfectlyModel>>(
+      future: _boxedState,
+      builder: (context, snapshots) {
+        if (snapshots.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshots.hasError) {
+          return Center(
+            child: Text("Error: ${snapshots.error}"),
+          );
+        } else if (!snapshots.hasData || snapshots.data!.isEmpty) {
+          return const Center(
+            child: Text("No Purrfectly Essentials"),
+          );
+        } else {
+          _currentBoxedState = snapshots.data!;
+          return SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: _currentBoxedState.map((boxedStateItem) {
+                return buildPurrfectly(
+                  boxedStateItem,
+                  toggleFavorite,
+                  toggleCart,
+                );
+              }).toList(),
+            ),
+          );
+        }
+      },
+    );
+  }
+}
+
+Widget buildPurrfectly(
+  PurrfectlyModel purrfectlyStateItem,
+  void Function(PurrfectlyModel) onToggleFavorite,
+  void Function(PurrfectlyModel) onToggleCart,
+) {
+  return Column(
+    children: [
+      Card(
+        shape: RoundedRectangleBorder(),
+        child: Container(
+          width: 150,
+          height: 230,
+          color: Colors.white,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  IconButton(
+                    onPressed: () => onToggleFavorite(purrfectlyStateItem),
+                    icon: Icon(Icons.favorite,
+                        color: purrfectlyStateItem.favorite
+                            ? Colors.grey[400]
+                            : const Color.fromARGB(255, 15, 206, 171)),
+                  ),
+                ],
+              ),
+              Expanded(
+                child: Image.network(
+                  purrfectlyStateItem.image,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                child: Text(
+                  purrfectlyStateItem.volume,
+                  style: const TextStyle(
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+              Container(
+                color: Colors.grey[400],
+                width: double.infinity,
+                height: 50,
+                child: TextButton(
+                  onPressed: () => onToggleCart(purrfectlyStateItem),
+                  style: TextButton.styleFrom(
+                    backgroundColor: purrfectlyStateItem.addToCart
+                        ? Colors.grey[400]
+                        : const Color.fromARGB(255, 15, 206, 171),
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero,
+                    ),
+                  ),
+                  child: Text(
+                    purrfectlyStateItem.addToCart
+                        ? "REMOVE FROM CART"
+                        : "ADD TO CART",
+                    style: const TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      SizedBox(
+        width: 150,
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: Text(
+                purrfectlyStateItem.name,
+                style: const TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 5),
+              child: Row(
+                children: [
+                  Text(
+                    "${purrfectlyStateItem.khmerValue}",
+                    style: const TextStyle(
+                      color: Color.fromARGB(255, 15, 206, 171),
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Row(
+              children: [
+                Text(
+                  "${purrfectlyStateItem.value}",
+                  style: const TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      )
+    ],
+  );
 }
 
 //Boxed=============================================================================

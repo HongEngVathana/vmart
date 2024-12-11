@@ -7,7 +7,7 @@ class WeeklyoffersModel {
   String convertedCurrency;
   double convertedValue;
   bool addToCart;
-  bool favoritte;
+  bool favorite;
 
   WeeklyoffersModel({
     this.name = "",
@@ -18,7 +18,7 @@ class WeeklyoffersModel {
     this.convertedCurrency = "",
     this.convertedValue = 0.0,
     this.addToCart = false,
-    this.favoritte = false,
+    this.favorite = false,
   });
 
   factory WeeklyoffersModel.fromJson(Map<String, dynamic> json) {
@@ -29,13 +29,13 @@ class WeeklyoffersModel {
     return WeeklyoffersModel(
       name: product['name'],
       image: product['image'],
-      volume: product['volume'],
+      volume: product['capacity'], // Match JSON key
       localCurrency: price['currency'],
       localValue: price['value'].toDouble(),
       convertedCurrency: price['converted']['currency'],
       convertedValue: price['converted']['value'].toDouble(),
       addToCart: actions['add_to_cart'],
-      favoritte: actions['favorite'],
+      favorite: actions['favorite'],
     );
   }
 }

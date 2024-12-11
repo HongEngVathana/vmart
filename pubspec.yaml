@@ -68,6 +68,9 @@ flutter:
     - lib/assets/jsons/survivalessentials.json
     - lib/assets/jsons/boxeddeals.json
     - lib/assets/jsons/purrfectly.json
+    - lib/assets/jsons/weeklyoffers.json
+    - lib/assets/jsons/newproduct.json
+    - lib/assets/jsons/freshpicks.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -1,11 +1,11 @@
 class PurrfectlyModel {
-  String name;
-  String image;
-  String volume;
-  String localCurrency;
-  String convertedCurrency;
-  double value;
-  String khmerValue;
+  final String name;
+  final String image;
+  final String volume;
+  final String localCurrency;
+  final String convertedCurrency;
+  final double value;
+  final String khmerValue;
   bool addToCart;
   bool favorite;
 
@@ -22,15 +22,15 @@ class PurrfectlyModel {
   });
 
   factory PurrfectlyModel.fromJson(Map<String, dynamic> json) {
-    final product = json['product'];
-    final price = product['price'];
-    final actions = product['actions'];
+    final product = json['product'] as Map<String, dynamic>? ?? {};
+    final price = product['price'] as Map<String, dynamic>? ?? {};
+    final actions = product['actions'] as Map<String, dynamic>? ?? {};
     return PurrfectlyModel(
       name: product['name'] ?? "",
       image: product['image'] ?? "",
       volume: product['volume'] ?? "",
       localCurrency: price['currency'] ?? "",
-      convertedCurrency: price['converted']['currency'] ?? "",
+      convertedCurrency: price['converted']?['currency'] ?? "",
       value: (price['value'] as num?)?.toDouble() ?? 0.00,
       khmerValue: price['khmer_value'] ?? "",
       addToCart: actions['add_to_cart'] ?? false,
