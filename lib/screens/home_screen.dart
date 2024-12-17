@@ -39,20 +39,34 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 15, 206, 171),
-        toolbarHeight: 85,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(50),
+        child: Stack(
+          clipBehavior: Clip.none,
           children: [
-            SizedBox(
-              width: 70,
-              height: 150,
-              child: Image.asset(
-                "lib/assets/images/logo.png",
-                fit: BoxFit.cover,
+            AppBar(
+              backgroundColor: const Color.fromARGB(255, 15, 206, 171),
+              elevation: 0,
+              centerTitle: true,
+              // title: const Text(
+              //   '',
+              //   style: const TextStyle(color: Colors.white),
+              // ),
+            ),
+            Positioned(
+              bottom: -15,
+              left: MediaQuery.of(context).size.width / 2 - 35,
+              child: CircleAvatar(
+                backgroundColor: const Color.fromARGB(255, 15, 206, 171),
+                radius: 35,
+                child: Image.asset(
+                  "lib/assets/images/logo.png",
+                  fit: BoxFit.cover,
+                  width: 40,
+                  height: 40,
+                ),
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -482,7 +496,7 @@ class FreshPicksCard extends StatelessWidget {
                       icon: Icon(Icons.favorite,
                           color: boxedStateItem.favorite
                               ? Colors.grey[200]
-                              : Color.fromARGB(255, 15, 206, 171)),
+                              : const Color.fromARGB(255, 15, 206, 171)),
                     ),
                   ],
                 ),
@@ -506,16 +520,16 @@ class FreshPicksCard extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all(
                           boxedStateItem.addToCart
                               ? Colors.grey[400]!
-                              : Color.fromARGB(255, 15, 206, 171)),
+                              : const Color.fromARGB(255, 15, 206, 171)),
                       shape: MaterialStateProperty.all(
                         const RoundedRectangleBorder(
                           borderRadius: BorderRadius.zero,
                         ),
                       ),
                     ),
-                    child: Text(
+                    child: const Text(
                       "ADD TO CART",
-                      style: const TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white),
                     ),
                   ),
                 ),
@@ -826,7 +840,7 @@ class BuildWeeklyCard extends StatelessWidget {
                       icon: Icon(Icons.favorite,
                           color: item.favorite
                               ? Colors.grey[200]
-                              : Color.fromARGB(255, 15, 206, 171)),
+                              : const Color.fromARGB(255, 15, 206, 171)),
                     ),
                   ],
                 ),
@@ -991,7 +1005,7 @@ Widget buildPurrfectly(
   return Column(
     children: [
       Card(
-        shape: RoundedRectangleBorder(),
+        shape: const RoundedRectangleBorder(),
         child: Container(
           width: 150,
           height: 230,

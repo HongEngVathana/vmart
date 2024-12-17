@@ -1,0 +1,42 @@
+[
+  {
+    "title": "My Wallet",
+    "icon": "Icons.account_balance_wallet"
+  },
+  {
+    "title": "Promo Codes",
+    "icon": "Icons.card_giftcard"
+  },
+  {
+    "title": "Refer a Friend",
+    "icon": "Icons.group"
+  },
+  {
+    "title": "Addresses",
+    "icon": "Icons.location_pin"
+  },
+  {
+    "title": "Profile",
+    "icon": "Icons.person"
+  },
+  {
+    "title": "Order History",
+    "icon": "Icons.shopping_cart"
+  },
+  {
+    "title": "Wishlist",
+    "icon": "Icons.star"
+  },
+  {
+    "title": "Notification Center",
+    "icon": "Icons.notifications"
+  },
+  {
+    "title": "FAQs",
+    "icon": "Icons.help"
+  },
+  {
+    "title": "My Favorites",
+    "icon": "Icons.favorite"
+  }
+]

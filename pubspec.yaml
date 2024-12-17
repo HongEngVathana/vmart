@@ -39,6 +39,7 @@ dependencies:
   carousel_slider: ^5.0.0
   smooth_page_indicator: ^1.2.0+3
   flutter_speed_dial: ^7.0.0
+  lottie: ^3.2.0
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,9 @@ flutter:
     - lib/assets/jsons/weeklyoffers.json
     - lib/assets/jsons/newproduct.json
     - lib/assets/jsons/freshpicks.json
+    - lib/assets/jsons/welcome.json
+    - lib/assets/jsons/categories_list.json
+    - lib/assets/jsons/profilepage.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
